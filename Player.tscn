@@ -20,10 +20,11 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 27.0
+radius = 34.0
+height = 0.0
 
 [node name="Player" type="Area2D"]
-position = Vector2( 3, 2 )
+position = Vector2( 18, 11 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true

@@ -10,6 +10,7 @@ var screen_size # Size of the game window.
 func _ready():
 	screen_size = get_viewport_rect().size
 	hide()
+	print('player _ready')
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -46,6 +47,7 @@ func _process(delta):
 
 func _on_Player_body_entered(body):
 	hide() # Player disappears after being hit.
+	print('_on_Player_body_entered')
 	emit_signal("hit")
 	# Must be deferred as we can't change physics properties on a physics callback.
 	$CollisionShape2D.set_deferred("disabled", true)
